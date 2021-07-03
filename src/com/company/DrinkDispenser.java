@@ -34,7 +34,11 @@ public class DrinkDispenser {
                 System.out.println("ERROR: invalid size");
                 return;
         }
-        syrups.get(syrupI).dispense(vol);
+        String drink = syrups.get(syrupI).dispense(vol);
+
+        System.out.printf("%s %s\n", size, drink);
+        //System.out.println(size + " " + drink);
+
     }
 
     public void addSyrup(Syrup newSyrup) {
@@ -43,6 +47,18 @@ public class DrinkDispenser {
 
     public void addSyrup(String name, int vol) {
         syrups.add(new Syrup(name, vol));
+    }
+
+    public List<String> lowSyrups(int lowValue) {
+        List<String> areLow = new ArrayList<>();
+
+        for (int i = 0; i < syrups.size(); i++) {
+            if (syrups.get(i).getVol() <= lowValue) {
+                areLow.add(i + ": " + syrups.get(i).name);
+            }
+        }
+
+        return areLow;
     }
 
 
