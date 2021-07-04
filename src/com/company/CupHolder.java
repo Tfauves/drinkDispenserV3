@@ -1,8 +1,15 @@
 package com.company;
 
 public class CupHolder {
-    public int vol;
-    public int qty = 0;
+    private int vol;
+    private int qty = 0;
+
+    public int getQty() {
+        return qty;
+    }
+    public void setQty(int dispQty) {
+        this.qty = dispQty;
+    }
 
     public CupHolder(int vol) {
         this.vol = vol;

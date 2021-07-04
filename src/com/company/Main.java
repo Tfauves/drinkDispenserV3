@@ -16,9 +16,13 @@ public class Main {
         dispenser01.addSyrup("Sprite", 700);
         dispenser01.addSyrup("Root Beer", 700);
 
-        System.out.printf("M cups: %d\tdrink 1 vol: %d\n", dispenser01.medium.qty, dispenser01.syrups.get(1).getVol());
-        dispenser01.serveDrink("M", 1);
-        System.out.printf("M cups: %d\tdrink 1 vol: %d\n", dispenser01.medium.qty, dispenser01.syrups.get(1).getVol());
+
+        System.out.printf("M cups: %d\tdrink 1 vol: %d\n", dispenser01.medium.getQty(), dispenser01.syrups.get(1).getVol());
+        dispenser01.serveDrink("S", 1);
+        dispenser01.serveDrink("M", 2);
+        dispenser01.serveDrink("M", 2);
+        dispenser01.serveDrink("L", 3);
+        System.out.printf("M cups: %d\tdrink 1 vol: %d\n", dispenser01.medium.getQty(), dispenser01.syrups.get(1).getVol());
         System.out.println(dispenser01.lowSyrups(50));
 
     }
