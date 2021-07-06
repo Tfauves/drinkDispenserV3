@@ -54,12 +54,14 @@ public class DrinkDispenser {
 
         for (int i = 0; i < syrups.size(); i++) {
             if (syrups.get(i).getVol() <= lowValue) {
-                areLow.add(i + ": " + syrups.get(i).name);
+                areLow.add(i + ": " + syrups.get(i).getName());
             }
         }
 
         return areLow;
     }
+
+
 
 
 }

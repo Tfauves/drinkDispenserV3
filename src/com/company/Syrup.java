@@ -1,8 +1,15 @@
 package com.company;
 
 public class Syrup {
-    public String name;
-    public int vol;
+    private String name;
+    private int vol;
+
+    public String getName() {
+        return name;}
+        public void setName(String syrupName) {
+            this.name = syrupName;
+        }
+
 
     public Syrup(String name, int vol) {
         this.name = name;
